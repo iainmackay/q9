@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="robots" content="noindex">
 
 		<title>Handy Calculator</title>
 		<style>
@@ -134,11 +135,9 @@ button {
 	const clearMessages = function() {
 		console.log ($('.warning'));
 		$('.warning').forEach ((el) => el.classList.add("hidden"));
-		console.log ("Messages cleared");
 	}
 	const showMessage = function (m) {
 		$('#' + m).classList.remove("hidden");
-		console.log ("Showing messages");
 	}
 
 	// Equals clicked. Calculate result
@@ -168,7 +167,6 @@ button {
 					resultNum = accumulator ** currentNumber;
 					break;
 				}
-			console.log (operator, accumulator, currentNumber, resultNum);
 			if (isFinite (resultNum)) {
 				$accumulator.innerHTML = accumulatorText = resultNum.toString ();
 				$currentNumber.innerHTML = currentNumberText = "";
